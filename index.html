@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Olá Mundo!!</title>
+</head>
+
+<body>
+
+    <h1>Pra dar inicio, nada melhor do que um inicio!</h1>
+    <h1>Eai FHP, Saudade de vocês espero que ajude!</h1>
+    <h2>Vou deixar isso salvo nos meus arquivos pessoias pra usos futuros, vai ser bom ver essa mensagem</h2>
+    <h2> O atual valor é: <span id="valorDaVariavel">0</span>L/s</h2>
+    <script>
+        // Esse texto é pra ser deixado aqui sempre
+        // Em homenagem a todos os amigos que estiveram presentes em nossa tragetoria de sucesso!!
+        // Valeu Familia Happy Boys <3
+        setInterval(function () {
+            PegarValVazao();
+        }, 1000);
+        function PegarValVazao() {
+            var requisicaoDaVariavel = new XMLHttpRequest();
+            requisicaoDaVariavel.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("valorDaVariavel").innerHTML = this.responseText;
+                }
+            };
+            requisicaoDaVariavel.open("GET", "http://192.168.1.106/test"); // Aqui você muda para o IP do seu ESP na rede
+            requisicaoDaVariavel.send();
+        }
+
+    </script>
+
+</body>
+
+</html>
