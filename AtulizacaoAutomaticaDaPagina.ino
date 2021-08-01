@@ -5,8 +5,8 @@
 
 WebServer server(80);
 
-const char *ssid = "EMTEC-FIBRA-KOA";
-const char *passwd = "l30n4rdo";
+const char *ssid = "***"; // O nome da sua rede WiFi
+const char *passwd = "***"; // Senha da Sua rede WiFi
 
 int i = 0;
 
